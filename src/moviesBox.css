@@ -1,0 +1,575 @@
+
+	h1,
+	h2 {
+		font-weight: normal;
+    text-align: center;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	a {
+		color: #42b983;
+	}
+
+	/*
+Theme Name:     Streaming child theme
+Description:    Child theme for anything, made to work with twentyeleven but can be adapted with minimum changes to any theme
+Template:       twentyeleven
+Version:        0.1.0
+*/
+
+
+@import url("../twentyeleven/style.css");
+
+/*
+base styles
+*/
+
+
+body {
+	background: url("images/bg-combo.jpg") no-repeat scroll 50% 0 transparent;
+	color: #444444;
+	margin: auto;
+	padding: 0;
+	background-color: #4D535F;
+}
+a {
+  color: #2C8195;
+}
+#page {
+	background-color: transparent;
+	margin: 0 auto;
+	max-width: 1001px;
+}
+
+#main > div, #main > section, #supplementary {
+	background: none repeat scroll 0 0 #FFFFFF;
+}
+
+#main {
+	padding-top: 40px;
+}
+
+#branding {
+	border-top: 0;
+	padding-bottom: 0;
+}
+
+#branding #searchform {
+	background: none repeat scroll 0 0 #353942;
+    border-bottom: 1px solid #7D7D7D;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45) inset;
+}
+
+#branding #searchform {
+	top: 3em;
+}
+
+#branding input#s {
+    border: 0 none;
+    color: #B3B3B3;
+    font: 14px Arial,Helvetica,Geneva,sans-serif;
+    outline: medium none;
+    width: 10em;
+}
+
+
+#site-title img {
+	height: 75px;
+	width: 231px;
+}
+#site-title {
+	padding-top: 5px;
+}
+#site-description {
+	margin-top: 75px;
+	margin-bottom: 11px;
+}
+
+
+#access {
+	background: none;
+	box-shadow: none;
+	margin: 0;
+}
+#access div {
+	margin: 0;
+}
+#access ul {
+	margin: 0;
+}
+#access a {
+	line-height: 2.3em;
+}
+#access .menu > li {
+	background: url("images/tab-off.png") no-repeat scroll 0 0 transparent;
+    margin: 0 4px 0 0;
+    width: 200px;
+	float: left;
+}
+#access .menu > li .last-menu-item { /* TODO: change generated HTML */
+	margin: 0;
+}
+#access .menu > li:hover > a {
+	background: url("images/tab-on.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+}
+#access .menu > li > a {
+	font-size: 150%;
+}
+#access .menu > .current-menu-item > a {
+	background: url("images/tab-on.png") no-repeat scroll 0 0 transparent;
+	font-weight: normal;
+}
+
+
+/* Search widget
+*/
+
+#search {
+  background: url("images/srch-bg.jpg") repeat-x scroll 0 0 transparent;
+  height: 27px;
+  padding: 7px 0 0px 160px;
+  position: relative;
+  top: 44px;
+}
+.customsearch {position:absolute;width:100%;font-size:11px;}
+#search img {margin-right:10px;width:50px;}
+#search .searchbox, #search .search_select_box {font-size:100%;border:1px solid #ccc;margin-right:15px;float:left;padding:2px 0 0 2px;}
+#search .searchbox {width:200px;}
+#search .searchtext {height:15px;float:left;padding:2px 0 0 0;}
+#search .search_submit {height:15px;padding:2px 0 0 0;}
+#search .searchbox {height:15px;}
+
+
+
+
+/* Glossaries
+*/
+
+.glossary ul {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.glossary li {
+	font-size: 80%;
+	list-style: none;
+	line-height: 1.5em;
+	float: left;
+	display: inline;
+	width: 33%; /* 3 columns */
+}
+.glossary .glossaryheader {
+	margin-bottom: 20px;
+}
+
+
+
+/* fixing twentyeleven oddness for single posts (Content Posts) 
+	so we can show a sidebar properly (with related content thumbnails) */
+
+/* Without explicitly setting the position we're inheriting 
+a value of "absolute" which will place the meta information at the top of the article */
+.single-content-post .entry-header .entry-meta {
+	position: relative;
+}
+
+/* Without explicitly setting the padding we're inheriting 
+a padding-top value of "4.875em" which adds redundant whitespace to the top of the article */
+.single-content-post .hentry {
+	padding: 0;
+}
+
+/* Without explicitly setting the width we're inheriting 
+a value of "68.9%" which stops the content from taking up the majority of the space available */
+.single-content-post .entry-header, .single-content-post .entry-content, .single-content-post footer.entry-meta, .single-content-post #comments-title {
+	width: 100%;
+}
+
+/* Without explicitly setting the padding-top we're inheriting 
+a value of "15px" which adds redundant whitespace to the top of the article */
+.single-content-post article .entry-title {
+	padding-top: 0;
+}
+
+.widget img {
+	max-width: 100%;
+}
+.widget a {
+	font-weight: normal;
+}
+.widget ul li {
+  color: #2C8195;
+  font-size: 12px;
+}
+.archive #content {
+	width: 80%;
+}
+
+.commentlist {	
+	width: 90%;
+}
+
+
+
+/* Registration
+*/
+
+.registration label {
+	float: left;
+	width: 150px;
+}
+.registration .separator {
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.registration {
+	margin-bottom: 50px;
+}
+
+
+/* admin page
+*/
+
+#adminmenu .menu-icon-content-post div.wp-menu-image {
+    background-position: -269px -33px;
+}
+
+
+
+/* Content Posts specific
+*/
+.clear {
+	clear: both;
+}
+.single-content-post .entry-content .attachment-thumbnail {
+	float: left;
+	padding-right: 15px;
+}
+.single-content-post .entry-content {
+	font-size: 80%;
+}
+.single-content-post .content-synopsis {
+	padding-bottom: 10px;
+}
+.single-content-post .directors {
+	padding-bottom: 5px;
+}
+.single-content-post .trailer {
+	padding-bottom: 5px;
+}
+.single-content-post .cacaovideo {
+    width: 640px;
+	padding: 10px;
+}
+.single-content-post ul.seasons > li > ul > li {
+	float: left;
+	list-style: none;
+}
+.single-content-post ul.seasons > li {
+	clear: both;
+	margin-top: 3px;
+}
+.single-content-post .entry-content {
+	clear: both;
+}
+
+.entry-title {
+	font-size: 270%;
+	font-weight: normal;
+	color: #A1023E;
+}
+
+#content {
+	min-height: 800px;
+}
+
+/* Gallery of Posts, this is also used in archive template pages and search results
+*/
+
+.coverGroup {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    height: 262px;
+    line-height: 135%;
+    /*overflow: hidden;*/
+    padding: 6px;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    width: 150px;
+}
+.coverGroup:hover {
+    border-radius: 3px 3px 3px 3px;
+    color: #CCCCCC;
+}
+.typicalGrey {
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+.typicalGrey:hover {
+    background-color: #595959;
+    background: -moz-linear-gradient(center top , #828282 0%, #595959 100%) repeat scroll 0 0 transparent;
+    color: #FFFFFF !important;
+}
+.typicalGrey:hover > .movieName {
+    text-shadow: -1px 1px 0 #4D4D4D;
+}
+.coverGroup img {
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+}
+.coverGroup:hover img {
+    border-bottom: 1px solid #4D4D4D;
+    border-left: 1px solid #4D4D4D;
+}
+.coverGroup a {
+    text-decoration: none;
+}
+.coverImage {
+    display: block;
+    margin-bottom: 5px;
+}
+.coverImage img {
+    border-radius: 3px 3px 3px 3px;
+}
+.movieName {
+    color: #999999;
+    display: block;
+    font-size: 12px;
+    height: 36px;
+    max-width: 150px;
+    overflow: hidden;
+}
+.coverGroup:hover .bubbleinfo {
+	display: block;
+}
+.bubbleinfo {
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    font-size: 10px;
+    left: 20px;
+    line-height: 120%;
+    padding: 12px;
+    position: absolute;
+    text-align: justify;
+    top: 200px;
+    width: 220px;
+    z-index: 1000;
+    display: none;
+}
+.bubblesynopsis {
+	color: #333333;
+}
+.bubblesubtitle {
+	font-size: 140%;
+	margin-bottom: 10px;
+}
+
+
+/* video links, seasons and episodes
+*/
+#btn-get-cacaoweb {
+  background: url("images/btn-getbt.png") no-repeat scroll 0 0 transparent;
+  height: 22px;
+  width: 129px;
+  margin-left: 5px;
+  margin-right: -129px;
+  cursor: pointer;
+}
+#btn-get-cacaoweb:hover {
+  background: url("images/btn-getbt-on.png") no-repeat scroll 0 0 transparent;
+}
+
+.videoheader {
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.videoheader > div {
+	float: left;
+}
+.videoheader h3 {
+	padding: 10px;
+}
+.videolinks {
+	clear: both;
+}
+.videolinks .cacaolink {
+	float: left;
+	font-family: 'Courier New', monospace;
+	font-size: 90%;
+	cursor: pointer;
+    background: none repeat scroll 0 0 #808080;
+    border: 1px solid #404040;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: inline;
+    line-height: 1;
+    margin: 3px;
+    padding: 7px;
+}
+.cacaolinkclicked {
+	background: none repeat scroll 0 0 #2C8195 !important;
+}
+.cacaolink .sidesign {
+    float: right;
+	margin: 2px -5px -5px 1px;
+}
+.cacaolink .mainboxtext {
+    float: left;
+}
+.videolinks .cacaolink:hover {
+    background: none repeat scroll 0 0 #2C8195;
+    /*border: 1px solid #000000;*/
+}
+.videolinks .hidden {
+	display: none;
+}
+.videolinks .pluslink {
+	float: left;
+	padding-top: 14px;
+	padding-right: 2px;
+	cursor: pointer;
+	font-size: 11px;
+}
+.videolinks .pluslink:hover {
+    color: #2C8195;
+    /*border: 1px solid #000000;*/
+}
+.videolinks h4 {
+    background: none repeat scroll 0 0 #404040;
+    border-radius: 4px 4px 4px 4px;
+    margin: 10px 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.videolinks h4 span {
+    color: #1b8be0;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.sharing {
+	margin-top: 20px;
+}
+.mediaarea {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+
+
+
+
+/* pagination for galleries
+*/
+
+.pagination {
+	clear: both;
+	font-size: 110%;
+	margin: 15px 0 15px 10px;
+}
+.pagination a, .pagination span {
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+	margin: 2px;
+}
+.pagination a:hover, .pagination span.current {
+	border-color: #000;
+}
+.pagination span.current {
+	font-weight: bold;
+}
+
+
+
+
+/* special footer
+*/
+
+#ft-container {
+  margin: auto auto 3px;
+  
+  text-align: center;
+}
+#ft {
+  background-color: transparent;
+  background-image: url("images/ft-curve-r.gif");
+  background-position: right center;
+  background-repeat: no-repeat;
+  clear: both;
+  color: #2C8195;
+  font-size: 85%;
+  height: 25px;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  width: 1001px;
+}
+#ft-curve-l {
+  background: url("images/ft-curve-l.gif") no-repeat scroll left bottom transparent;
+  height: 25px;
+}
+#ft ul {
+  list-style: none outside none;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
+#ft li {
+  border-right: 1px solid #2C8195;
+  display: inline;
+  padding: 0;
+}
+#ft li a {
+  padding: 0 10px;
+}
+#ft a, #ft a:link, #ft a:active, #ft a:visited {
+  color: #2C8195;
+  text-decoration: none;
+}
+
+
+
+#sub-ft {
+  color: #999999;
+  font-size: 85%;
+  margin: auto;
+  padding-bottom: 3px;
+  
+	text-align: center;
+}
+
+#sub-ft ul {
+  list-style: none outside none;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
+#sub-ft li {
+  border-right: 1px solid #999999;
+  display: inline;
+  padding: 0;
+}
+#sub-ft a {
+  color: #999999;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.last-item {
+  border-right: medium none !important;
+}
+#sub-ft p {
+  font-size: 100%;
+  margin: 5px auto;
+}
